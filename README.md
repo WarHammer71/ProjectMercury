@@ -12,28 +12,13 @@ Brigham Young University–Idaho
 
 ---
 
-## What this is
+## Overview
 
-Mercury is a lightweight, multi-project .NET prototype of a secure envelope-based communications layer, created as the CSE499 senior capstone project.
+Mercury is a lightweight demonstration of real-world secure communications concepts. It was designed and implemented as the CSE499 senior capstone project to show how a communications layer can protect payloads, detect tampering, reject replays, and keep security logic separate from transport logic.
 
-It demonstrates modular architecture, pluggable authenticated-encryption providers, secure envelope handling, transport abstraction, replay protection, controlled failure, working demos, and automated tests.
+The implementation is deliberately limited. Scope was constrained by academic time limits and by the requirement to avoid exposing proprietary processes developed for ShadowWorx Systems. What is shown is real engineering applied to the problem; what is omitted is intentional.
 
-It is an academic proof-of-concept. It is not a production system.
-
-## What this is not
-
-This repository is **not** UmbraUplink, UmbraCipher, or any other ShadowWorx Systems product.
-
-ShadowWorx Systems LLC develops separate, proprietary communications and security components. Those products are not open-sourced here. Mercury is earlier student work exploring related concepts only.
-
-## Copyright and use
-
-Copyright © 2026 Matthew D. Barker. All rights reserved.
-
-Submitted in partial fulfillment of CSE499 at Brigham Young University–Idaho.  
-No license is granted for commercial use, redistribution, or incorporation into other systems without explicit written permission.
-
-The original academic submission remains under the BYU-Idaho account per course agreement. This is a personal copy.
+It is not a production system.
 
 ---
 
@@ -43,16 +28,19 @@ The original academic submission remains under the BYU-Idaho account per course 
 
 ---
 
-## Academic Scope
+## Scope
 
-Mercury is a CSE499 senior project intended to demonstrate architecture, implementation, modularity, testing, and defensive design.
+Mercury demonstrates core secure-communications principles within the boundaries of a senior capstone.
 
-| It is | It is not |
+| Demonstrated | Limited by design |
 | --- | --- |
-| An academic prototype | A commercial product |
-| A demonstration of secure-envelope design | A military or classified system |
-| Modular and testable | DoD- or production-certified |
-| Limited in scope by design | A full PKI or key-management system |
+| Secure envelope construction and validation | Production hardening |
+| Pluggable authenticated-encryption providers | Full key-management and PKI |
+| Transport abstraction | Proprietary ShadowWorx processes |
+| Replay protection | Certification or classified use |
+| Controlled failure behavior | Complete commercial feature set |
+
+The limits exist because of time constraints and confidentiality. They are not claims that the underlying concepts are incomplete.
 
 ---
 
@@ -125,16 +113,23 @@ dotnet run --project Mercury.Demo.WinForms
 - Process-local in-memory replay protection
 - Not production-hardened
 - Demo-focused interfaces
+- Proprietary ShadowWorx processes intentionally omitted
 
-These limits are intentional.
+These constraints reflect the academic timeline and confidentiality requirements.
+
+---
+
+## Copyright
+
+Copyright © 2026 Matthew D. Barker. All rights reserved.
+
+Submitted in partial fulfillment of CSE499 at Brigham Young University–Idaho.  
+No license is granted for commercial use, redistribution, or incorporation into other systems without explicit written permission.
+
+The original academic submission remains under the BYU-Idaho account per course agreement. This repository is a personal copy.
 
 ---
 
 ## Summary
 
-Mercury demonstrates a modular approach to protecting payloads over untrusted transports. It is academic work.
-
-Protect the payload.  
-Treat the transport as untrusted.  
-Fail safely.  
-Keep the commercial product separate.
+Mercury is a lightweight, working demonstration of secure communications principles. It was built under real constraints of time and confidentiality. The concepts are production-relevant; the implementation is scoped to what could be shown.
