@@ -1,12 +1,12 @@
 <div align="center">
 
-# Mercury
+# The Mercury Project
 
-**CSE499 Senior Capstone Project**  
-Brigham Young University–Idaho  
-Matthew D. Barker
-
+### CSE499 Senior Capstone  
 **Version 1.2.0-rc.1** · Academic Release Candidate
+
+Matthew D. Barker  
+Brigham Young University–Idaho
 
 </div>
 
@@ -14,18 +14,9 @@ Matthew D. Barker
 
 ## What this is
 
-Mercury is a lightweight, multi-project .NET prototype of a secure envelope-based communications layer. It was designed and implemented as the CSE499 senior capstone project.
+Mercury is a lightweight, multi-project .NET prototype of a secure envelope-based communications layer, created as the CSE499 senior capstone project.
 
-It demonstrates:
-
-- Separation of crypto, envelope, transport, and client coordination
-- Pluggable authenticated-encryption providers (AES-GCM, ChaCha20-Poly1305)
-- Secure envelope construction and validation
-- Transport abstraction (in-memory, framed TCP)
-- Replay protection
-- Controlled failure behavior
-- Working console and WinForms demonstrations
-- Automated tests
+It demonstrates modular architecture, pluggable authenticated-encryption providers, secure envelope handling, transport abstraction, replay protection, controlled failure, working demos, and automated tests.
 
 It is an academic proof-of-concept. It is not a production system.
 
@@ -33,16 +24,16 @@ It is an academic proof-of-concept. It is not a production system.
 
 This repository is **not** UmbraUplink, UmbraCipher, or any other ShadowWorx Systems product.
 
-ShadowWorx Systems LLC develops separate, proprietary, production-oriented communications and security components. Those products are not open-sourced here and are not derived from this academic submission. Mercury represents earlier student exploration of related concepts only.
+ShadowWorx Systems LLC develops separate, proprietary communications and security components. Those products are not open-sourced here. Mercury is earlier student work exploring related concepts only.
 
 ## Copyright and use
 
 Copyright © 2026 Matthew D. Barker. All rights reserved.
 
-This code was submitted in partial fulfillment of CSE499 at Brigham Young University–Idaho.  
-No license is granted for commercial use, redistribution, modification and redistribution as a product, or incorporation into other systems without explicit written permission from the copyright holder.
+Submitted in partial fulfillment of CSE499 at Brigham Young University–Idaho.  
+No license is granted for commercial use, redistribution, or incorporation into other systems without explicit written permission.
 
-The original academic submission remains under the BYU-Idaho account per course agreement. This repository is a personal copy maintained by the author.
+The original academic submission remains under the BYU-Idaho account per course agreement. This is a personal copy.
 
 ---
 
@@ -54,15 +45,14 @@ The original academic submission remains under the BYU-Idaho account per course 
 
 ## Academic Scope
 
-Mercury is submitted as a CSE499 senior project. It is intended to demonstrate architecture, implementation, modularity, testing, and defensive design.
+Mercury is a CSE499 senior project intended to demonstrate architecture, implementation, modularity, testing, and defensive design.
 
-It is not:
-
-- A commercial product
-- A military or classified system
-- A DoD-certified or production-certified system
-- A complete identity, PKI, or key-management solution
-- A chat application
+| It is | It is not |
+| --- | --- |
+| An academic prototype | A commercial product |
+| A demonstration of secure-envelope design | A military or classified system |
+| Modular and testable | DoD- or production-certified |
+| Limited in scope by design | A full PKI or key-management system |
 
 ---
 
@@ -86,7 +76,7 @@ It is not:
 
 ## High-level flow
 
-~~~text
+```text
 Application
    ↓
 Mercury Client
@@ -100,7 +90,7 @@ Transport (untrusted)
 Receiving Mercury Client
    ↓
 Application (only after validation)
-~~~
+```
 
 Security is applied above the transport. The transport only moves frames.
 
@@ -110,27 +100,25 @@ Security is applied above the transport. The transport only moves frames.
 
 Requires the .NET SDK.
 
-~~~powershell
+```powershell
 dotnet restore
 dotnet build
 dotnet test
-~~~
+```
 
-Console demo:
-
-~~~powershell
+**Console demo**
+```powershell
 dotnet run --project Mercury.Demo.Console
-~~~
+```
 
-WinForms demo (Windows):
-
-~~~powershell
+**WinForms demo (Windows)**
+```powershell
 dotnet run --project Mercury.Demo.WinForms
-~~~
+```
 
 ---
 
-## Known limitations (academic scope)
+## Known limitations
 
 - No PKI, certificates, or production key management
 - No key exchange or rotation
@@ -138,13 +126,13 @@ dotnet run --project Mercury.Demo.WinForms
 - Not production-hardened
 - Demo-focused interfaces
 
-These limits are intentional. The project does not claim production readiness.
+These limits are intentional.
 
 ---
 
 ## Summary
 
-Mercury shows a modular approach to protecting payloads over untrusted transports, with clear boundaries between crypto, encoding, transport, and client logic. It is academic work.
+Mercury demonstrates a modular approach to protecting payloads over untrusted transports. It is academic work.
 
 Protect the payload.  
 Treat the transport as untrusted.  
