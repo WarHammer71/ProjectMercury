@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mercury.Abstractions\Mercury.Abstractions.csproj" />
+    <ProjectReference Include="..\Mercury.Core\Mercury.Core.csproj" />
+    <ProjectReference Include="..\Mercury.Extensions.EasySetup\Mercury.Extensions.EasySetup.csproj" />
+    <ProjectReference Include="..\Mercury.Provider.AesCcm\Mercury.Provider.AesCcm.csproj" />
+    <ProjectReference Include="..\Mercury.Provider.AesGcm\Mercury.Provider.AesGcm.csproj" />
+    <ProjectReference Include="..\Mercury.Provider.ChaCha20\Mercury.Provider.ChaCha20.csproj" />
+    <ProjectReference Include="..\Mercury.Transport.FileDrop\Mercury.Transport.FileDrop.csproj" />
+    <ProjectReference Include="..\Mercury.Transport.InMemory\Mercury.Transport.InMemory.csproj" />
+    <ProjectReference Include="..\Mercury.Transport.Tcp\Mercury.Transport.Tcp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Support\" />
+  </ItemGroup>
+
+</Project>
